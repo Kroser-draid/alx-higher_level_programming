@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-
 def multiple_returns(sentence):
-    _len = len(sentence)
-    if sentence == "":
-        char = None
+    if len(sentence) == 0:
+        f_chr = None
+        length = len(sentence)
+        return (length, f_chr)
     else:
-        char = sentence[0]
-    tuple_return = (_len, char)
-    return tuple_return
+        f_chr = sentence[0]
+        length = len(sentence)
+        return (length, f_chr)
