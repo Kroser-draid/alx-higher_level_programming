@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-
 def uniq_add(my_list=[]):
-    unique_elements = set(my_list)
-    result = sum(unique_elements)
+    appearance = []
+    result = 0
+    for item in my_list:
+        if appearance.count(item) <= 0:
+            result += item
+            appearance.append(item)
     return result
