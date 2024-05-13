@@ -11,4 +11,3 @@ def weight_average(my_list=[]):
                 factor += item[i + 1]
         result = multi / factor
         return result
-                
