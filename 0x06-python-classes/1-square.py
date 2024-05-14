@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """square class that have one private object
 """
+
+
 class Square:
     """this is a square that defines a square
     """
