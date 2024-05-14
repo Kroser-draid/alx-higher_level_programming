@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 class Square:
+    """this is a square that defines a square
+    """
     __size = 0
 
     def __init__(self, size):
+        """this initiate the size arg
+
+        Args:
+            size (integer): The size of the square
+        """
         self.__size = size
