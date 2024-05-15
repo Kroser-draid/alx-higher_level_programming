@@ -1,3 +1,17 @@
+#!/usr/bin/python3
+"""class Node
+
+    Raises:
+        TypeError: _description_
+        TypeError: _description_
+        TypeError: _description_
+        TypeError: _description_
+
+    Returns:
+        _type_: _description_
+"""
+
+
 class Node:
     """
     Represents a node in a singly linked list.
