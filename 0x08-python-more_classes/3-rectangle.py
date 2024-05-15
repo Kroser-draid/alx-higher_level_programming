@@ -1,64 +1,62 @@
 #!/usr/bin/python3
-"""Rectangle."""
+"""a rectangle class
+"""
 
 
 class Rectangle:
-    """Rectangle."""
+    """a rectangle class
+    """
     def __init__(self, width=0, height=0):
-        """__init__.
-
-        :param width: width of the Rectangle.
-        :param height: height of the Rectangle.
+        """pass
         """
-        self.width = width
         self.height = height
+        self.width = width
 
     @property
     def width(self):
-        """width."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """width.
-
-        :param value: the value.
-        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
+        else:
+            self.__width = value
 
     @property
     def height(self):
-        """height."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """height.
-
-        :param value: the value.
-        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
+        else:
+            self.__height = value
 
     def area(self):
-        """area."""
-        return self.__height * self.__width
+        return self.__width * self.height
 
     def perimeter(self):
-        """perimeter."""
-        if self.__width == 0 or self.__height == 0:
+        if self.__width == 0:
             return 0
-        return 2 * (self.__width + self.__height)
+        elif self.__height == 0:
+            return 0
+        else:
+            return (self.__height + self.width) * 2
 
     def __str__(self):
-        """__str__."""
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0:
             return ""
-        return '\n'.join(['#' * self.__width for _ in range(self.__height)])
+        elif self.height == 0:
+            return ""
+        else:
+            for i in range(self.__height):
+                for i in range(self.__width):
+                    print("#", end="")
+                print("")
+        return ""

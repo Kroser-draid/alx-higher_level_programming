@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-"""Rectangle."""
+"""a rectangle class
+"""
 
 
 class Rectangle:
-    """Rectangle."""
-
-    pass
+    """a rectangle class
+    """
+    def __init__(self):
+        """pass
+        """
+        pass
