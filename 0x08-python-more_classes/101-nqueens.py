@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 import sys
 if len(sys.argv) > 2 or len(sys.argv) == 1:
     print("Usage: nqueens N")
