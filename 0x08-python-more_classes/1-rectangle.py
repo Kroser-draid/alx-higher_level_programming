@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"""a rectangle class
+"""class rectangle
 """
 
 
 class Rectangle:
-    """a rectangle class
+    """rectangle class
     """
+
     def __init__(self, width=0, height=0):
-        """pass
-        """
-        self.height = height
-        self.width = width
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):

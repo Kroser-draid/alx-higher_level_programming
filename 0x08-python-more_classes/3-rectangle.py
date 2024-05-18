@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"""a rectangle class
+"""class rectangle
 """
 
 
 class Rectangle:
-    """a rectangle class
+    """rectangle class
     """
+
     def __init__(self, width=0, height=0):
-        """pass
-        """
-        self.height = height
-        self.width = width
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -39,20 +38,21 @@ class Rectangle:
             self.__height = value
 
     def area(self):
-        return self.__width * self.height
+        return self.__height * self.__width
 
     def perimeter(self):
-        if self.__width == 0:
-            return 0
-        elif self.__height == 0:
+        if self.__height == 0 or self.__width == 0:
             return 0
         else:
-            return (self.__height + self.width) * 2
+            return (self.__height + self.__width) * 2
 
     def __str__(self):
-        if self.width == 0:
-            return ""
-        elif self.height == 0:
+        if self.__height == 0 or self.__width == 0:
             return ""
         else:
-            return '\n'.join(['#' * self.__width for _ in range(self.height)])
+            message = ''
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    message += "#"
+                message += "\n"
+        return str(message.rstrip("\n"))
