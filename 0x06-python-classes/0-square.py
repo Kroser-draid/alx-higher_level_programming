@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""class square
+"""
+
+
 class Square:
-    """This is a class that define a square
+    """class square
     """
-    pass
+
+    def __init__(self):
+        pass

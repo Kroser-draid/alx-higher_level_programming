@@ -6,13 +6,9 @@
 class Square:
     """class square
     """
-    def __init__(self, size=0):
-        """size init
 
-        Args:
-            size (integer):size of the square must be int
-        """
-        if type(size) is not int:
+    def __init__(self, size=0):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
@@ -20,7 +16,7 @@ class Square:
             self.__size = size
 
     def area(self):
-        return self.__size ** 2
+        return self.__size * self.__size
 
     @property
     def size(self):
@@ -28,7 +24,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
@@ -36,11 +32,10 @@ class Square:
             self.__size = value
 
     def my_print(self):
-        size_square = self.__size
-        if size_square == 0:
+        if self.__size == 0:
             print("")
         else:
-            for i in range(size_square):
-                for j in range(size_square):
-                    print("#", end="")
+            for i in range(self.size):
+                for j in range(self.__size):
+                    print("#", end='')
                 print("")
