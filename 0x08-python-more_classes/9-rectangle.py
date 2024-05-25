@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""class rectangle
+"""
+class rectangle
 """
 
 
 class Rectangle:
-    """rectangle class
+    """
+    class rectangle
     """
     number_of_instances = 0
     print_symbol = "#"
@@ -51,27 +53,31 @@ class Rectangle:
             self.__height = value
 
     def area(self):
-        return self.__height * self.__width
+        return self.__width * self.__height
 
     def perimeter(self):
-        if self.__height == 0 or self.__width == 0:
+        if self.__width == 0:
+            return 0
+        elif self.__height == 0:
             return 0
         else:
-            return (self.__height + self.__width) * 2
+            return (self.__width + self.__height) * 2
 
     def __str__(self):
-        if self.__height == 0 or self.__width == 0:
+        message = ''
+        if self.__width == 0:
+            return ""
+        elif self.__height == 0:
             return ""
         else:
-            message = ''
             for i in range(self.__height):
                 for j in range(self.__width):
                     message += str(self.print_symbol)
                 message += "\n"
-        return str(message.rstrip("\n"))
+        return message.strip("\n")
 
     def __repr__(self):
-        return f"Rectangle({self.__width}, {self.__height})"
+        return f"{self.__class__.__name__}({self.__width}, {self.__height})"
 
     def __del__(self):
         print("Bye rectangle...")
