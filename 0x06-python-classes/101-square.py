@@ -93,4 +93,4 @@ class Square:
                 for n in range(self.__size):
                     message += "#"
                 message += "\n"
-        return message
+        return message.rstrip("\n")
