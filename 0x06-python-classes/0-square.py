@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""class square
+"""
+create square class
 """
 
 
 class Square:
-    """class square
     """
-
+    class square
+    """
     def __init__(self):
         pass
