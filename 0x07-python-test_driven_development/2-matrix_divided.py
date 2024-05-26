@@ -14,7 +14,7 @@ def matrix_divided(matrix, div):
     if not isinstance(matrix, list):
         raise TypeError(int_float)
     elif len(matrix) < 2:
-        raise TypeError(int_float)
+        raise TypeError(message_1)
     else:
         first_len = len(matrix[0])
         for i in range(len(matrix)):
