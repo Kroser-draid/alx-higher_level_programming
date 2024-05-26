@@ -26,18 +26,19 @@ for sol in range(rows):
     column = 0
     while column < columns:
         row = 0
-        indice = 0
         while row < rows:
-            if (column not in prev_q_col) and ((row != prev_q[1] + 1) and (row != prev_q[1] - 1)) and ((row != column) and ([column, row] not in solutions)):
+            indice = 0
+            if (column not in prev_q_col) and ((row != prev_q[1] + 1) and (row != prev_q[1] - 1) and (row != prev_q[1])) and ((row != column) and ([column, row] not in solutions)):
                 solutions.append([column, row])
                 prev_q[0] = column
                 prev_q[1] = row
                 prev_q_col.append(column)
-                indice = 1
-                column += 1
+                if column < 4:   
+                    column += 1
+                    row = 0
+                    indice = 1
             else:
-                row += 1
-            row += 1
+                row += 1    
         if indice == 0:
             column += 1
     all_solutions.append(solutions)
