@@ -5,6 +5,9 @@ doc
 
 
 def matrix_divided(matrix, div):
+    """
+    documented
+    """
     int_float = "matrix must be a matrix (list of lists) of integers/floats"
     message_1 = "Each row of the matrix must have the same size"
     message_2 = "matrix must be a matrix (list of lists) of integers/floats"
