@@ -15,6 +15,7 @@ else:
         print("N must be a number")
         sys.exit(1)
 
+
 def is_safe(board, row, col):
     for i in range(row):
         if board[i] == col:
@@ -23,6 +24,7 @@ def is_safe(board, row, col):
         if abs(board[i] - col) == abs(i - row):
             return False
     return True
+
 
 def solve_nqueens(N):
     def solve(row):
@@ -39,6 +41,7 @@ def solve_nqueens(N):
     board = [-1] * N
     solve(0)
     return solutions
+
 
 solutions = solve_nqueens(N)
 for solution in solutions:
