@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import sys
 
-# Validate command-line arguments
+
 if len(sys.argv) != 2:
     print("Usage: nqueens N")
     sys.exit(1)
@@ -16,11 +16,9 @@ else:
         sys.exit(1)
 
 def is_safe(board, row, col):
-    # Check column
     for i in range(row):
         if board[i] == col:
             return False
-    # Check diagonals
     for i in range(row):
         if abs(board[i] - col) == abs(i - row):
             return False
@@ -43,8 +41,6 @@ def solve_nqueens(N):
     return solutions
 
 solutions = solve_nqueens(N)
-
-# Format and print solutions
 for solution in solutions:
     formatted_solution = []
     for row, col in enumerate(solution):
