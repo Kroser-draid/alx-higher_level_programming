@@ -21,24 +21,23 @@ prev_q_col = []
 solutions = []
 all_solutions = []
 prev_q_rows = []
-column = 0
 sol = 0
 for sol in range(rows):
+    column = 0
     while column < columns:
         row = 0
         indice = 0
         while row < rows:
-            if (column not in prev_q_col) and ((row != prev_q[1] + 1) and (row != prev_q[1] - 1)) and ((row != column) and (row not in prev_q_rows)):
+            if (column not in prev_q_col) and ((row != prev_q[1] + 1) and (row != prev_q[1] - 1)) and ((row != column) and ([column, row] not in solutions)):
                 solutions.append([column, row])
                 prev_q[0] = column
                 prev_q[1] = row
-                row += 1
                 prev_q_col.append(column)
-                prev_q_rows.append(row)
                 indice = 1
                 column += 1
             else:
                 row += 1
+            row += 1
         if indice == 0:
             column += 1
     all_solutions.append(solutions)
