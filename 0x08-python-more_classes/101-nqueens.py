@@ -33,15 +33,18 @@ for sol in range(rows):
                 prev_q[0] = column
                 prev_q[1] = row
                 prev_q_col.append(column)
-                if column < 4:   
+                if column < 3:   
                     column += 1
                     row = 0
                     indice = 1
+                else:
+                    break
             else:
                 row += 1    
         if indice == 0:
             column += 1
-    all_solutions.append(solutions)
+    all_solutions.append(solutions.copy())
+    solutions.clear()
 str_solution = str(all_solutions).replace('[[[', ' [[')
 str_solution = str_solution.replace(']]]', ']]')
 str_solution = str_solution.replace(']],', ']]\n')
