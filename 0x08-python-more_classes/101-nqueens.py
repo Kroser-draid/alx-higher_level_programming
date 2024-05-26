@@ -20,6 +20,7 @@ prev_q = [-1, -2]
 prev_q_col = []
 solutions = []
 prev_q_list = []
+prev_q_row = []
 all_solutions = []
 sol = 0
 for sol in range(rows - 2):
@@ -28,10 +29,11 @@ for sol in range(rows - 2):
         row = 0
         while row < rows:
             indice = 0
-            if (column not in prev_q_col) and ((row != prev_q[1] + 1) and (row != prev_q[1] - 1) and (row != prev_q[1])) and ((row != column) and ([column, row] not in prev_q_list)):
+            if (column not in prev_q_col) and ((row != prev_q[1] + 1) and (row != prev_q[1] - 1) and (row not in prev_q_row)) and ((row != column) and ([column, row] not in prev_q_list)):
                 solutions.append([column, row])
                 prev_q[0] = column
                 prev_q[1] = row
+                prev_q_row.append(row)
                 prev_q_col.append(column)
                 prev_q_list.append([column, row])
                 if column < (rows - 1):   
@@ -46,6 +48,7 @@ for sol in range(rows - 2):
             column += 1
     all_solutions.append(solutions.copy())
     solutions.clear()
+    prev_q_row.clear()
     prev_q = [-1, -2]
     prev_q_col.clear()
 str_solution = str(all_solutions).replace('[[[', ' [[')
