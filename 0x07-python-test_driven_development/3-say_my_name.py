@@ -1,19 +1,20 @@
 #!/usr/bin/python3
-"""say_my_name."""
+"""
+say my name Module
+"""
 
 
 def say_my_name(first_name, last_name=""):
-    """say_my_name.
-
-    Args:
-        param first_name: first name.
-        param last_name: last_name.
     """
-    a = not first_name
-    b = not isinstance(first_name, str)
-    c = not first_name.strip()
-    if a or b or c:
+    function that print my name is firstname lastname
+    """
+    if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
-    if last_name is None or not isinstance(last_name, str):
+
+    if len(first_name) == 0:
+        raise TypeError("first_name must be a string")
+
+    if not isinstance(last_name, str):
         raise TypeError("last_name must be a string")
-    print(f"My name is {first_name} {last_name}")
+
+    print("My name is {} {}".format(first_name, last_name))
