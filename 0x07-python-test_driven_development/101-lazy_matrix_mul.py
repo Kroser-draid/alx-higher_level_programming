@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 import numpy as np
 """
 module to multiplie two matrix
