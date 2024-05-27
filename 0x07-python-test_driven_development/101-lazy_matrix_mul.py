@@ -34,13 +34,13 @@ def lazy_matrix_mul(m_a, m_b):
     for row in m_b:
         for element in row:
             if not isinstance(element, (int, float)):
-                    raise TypeError("m_b should contain only integers or floats")
+                raise TypeError("m_b should contain only integers or floats")
 
         if len(row) != m_b_len:
             raise TypeError("each row of m_b must be of the same size")
 
         try:
-            result=np.dot(m_a, m_b)
+            result = np.dot(m_a, m_b)
         except Exception:
             raise ValueError("m_a and m_b can't be multiplied")
 
