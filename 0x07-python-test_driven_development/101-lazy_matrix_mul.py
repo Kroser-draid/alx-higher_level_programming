@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-import numpy as np
 """
 module to multiplie two matrix
 """
+import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
+    """
+    documented
+    """
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
 
