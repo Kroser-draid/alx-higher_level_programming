@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""class"""
+"""
+Module
+"""
 
 
 def is_kind_of_class(obj, a_class):
-    """is_kind_of_class.
-
-    :param obj:
-    :param a_class:
     """
-    return isinstance(obj, a_class)
+    function of module
+    """
+    if isinstance(obj, a_class) or isinstance(type(obj), a_class):
+        return True
+    else:
+        return False
