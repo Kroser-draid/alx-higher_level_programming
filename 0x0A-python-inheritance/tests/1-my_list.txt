@@ -25,3 +25,8 @@ Test on negative number:
 [-4, -1, 0, 2, 5]
 >>> print(new_list)
 [-1, 5, 2, -4, 0]
+
+Test on empty list:
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
