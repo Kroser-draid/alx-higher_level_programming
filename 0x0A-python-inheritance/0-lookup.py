@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""lookup"""
 
 
 def lookup(obj):
-    """lookup.
-
-    :param obj:
     """
-    return dir(obj)
+    function that return list
+    """
+    new_list = []
+    new_list = dir(obj)
+    return new_list
