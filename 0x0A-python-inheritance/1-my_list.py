@@ -4,7 +4,7 @@ module to sort list class
 """
 
 
-class Mylist(list):
+class MyList(list):
     """
     class Mylist
     """
