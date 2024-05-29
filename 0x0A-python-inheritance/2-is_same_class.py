@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""class"""
+"""
+Module
+"""
 
 
 def is_same_class(obj, a_class):
-    """is_same_class.
-
-    :param obj:
-    :param a_class:
     """
-    return True if type(obj) == a_class else False
+    function that check if it's instance of class
+    """
+    if isinstance(obj, a_class):
+        return True
+    else:
+        return False
