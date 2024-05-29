@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Module of function
+"""
 
 
 def lookup(obj):
