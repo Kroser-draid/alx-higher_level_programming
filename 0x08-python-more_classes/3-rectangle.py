@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-class rectangle
+Class rectangle
 """
 
 
 class Rectangle:
     """
-    class rectangle
+    rectangle class
     """
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
@@ -60,14 +60,11 @@ class Rectangle:
             return (self.__width + self.__height) * 2
 
     def __str__(self):
-        message = ''
-        if self.__width == 0:
-            return ""
-        elif self.__height == 0:
-            return ""
-        else:
-            for i in range(self.__height):
-                for j in range(self.__width):
-                    message += "#"
-                message += "\n"
-        return message.strip("\n")
+        width = self.__width
+        height = self.__height
+        message = ""
+        for i in range(height):
+            for j in range(width):
+                message += "#"
+            message += "\n"
+        return str(message)
