@@ -63,9 +63,12 @@ class Rectangle:
         width = self.__width
         height = self.__height
         message = ""
-        for i in range(height):
-            for j in range(width):
-                message += "#"
-            if i < (height - 1):
-                message += "\n"
-        return str(message)
+        if width == 0 or height == 0:
+            return ""
+        else:
+            for i in range(height):
+                for j in range(width):
+                    message += "#"
+                if i < (height - 1):
+                    message += "\n"
+            return str(message)
