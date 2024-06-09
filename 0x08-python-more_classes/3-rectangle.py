@@ -66,5 +66,6 @@ class Rectangle:
         for i in range(height):
             for j in range(width):
                 message += "#"
-            message += "\n"
+            if i < (height - 1):
+                message += "\n"
         return str(message)
