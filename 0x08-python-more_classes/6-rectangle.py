@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-class rectangle
+Class rectangle
 """
 
 
 class Rectangle:
     """
-    class rectangle
+    rectangle class
     """
     number_of_instances = 0
 
@@ -63,20 +63,22 @@ class Rectangle:
             return (self.__width + self.__height) * 2
 
     def __str__(self):
-        message = ''
-        if self.__width == 0:
-            return ""
-        elif self.__height == 0:
+        width = self.__width
+        height = self.__height
+        message = ""
+        if width == 0 or height == 0:
             return ""
         else:
-            for i in range(self.__height):
-                for j in range(self.__width):
+            for i in range(height):
+                for j in range(width):
                     message += "#"
-                message += "\n"
-        return message.strip("\n")
+                if i < (height - 1):
+                    message += "\n"
+            return str(message)
 
     def __repr__(self):
-        return f"{self.__class__.__name__}({self.__width}, {self.__height})"
+        message = "Rectangle({}, {})".format(self.__width, self.__height)
+        return message
 
     def __del__(self):
         print("Bye rectangle...")
