@@ -6,4 +6,4 @@ def lookup(obj):
     """
     returns dict
     """
-    return (list(obj.__dict__))
+    return (dir(obj))
