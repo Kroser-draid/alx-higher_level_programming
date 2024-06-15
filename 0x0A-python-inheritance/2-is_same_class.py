@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 """
-Module
+Module of function name of obj
 """
 
 
 def is_same_class(obj, a_class):
     """
-    function that check if it's instance of class
+    return true if it's in the class
+    false otherwise
     """
-    if type(obj) is a_class:
-        return True
-    else:
-        return False
+    return type(obj) is a_class
