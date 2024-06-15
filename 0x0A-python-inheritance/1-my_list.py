@@ -1,16 +1,12 @@
 #!/usr/bin/python3
 """
-module to sort list class
+List Module
 """
 
 
 class MyList(list):
     """
-    class Mylist
+    class inh from list
     """
-
     def print_sorted(self):
-        """
-        method that print sorted
-        """
         print(sorted(self))

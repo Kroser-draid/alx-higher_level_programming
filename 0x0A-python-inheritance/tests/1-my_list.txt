@@ -1,32 +1,43 @@
-Test Mylist class
+Test MyList class
 =================
-Import the module
----Try it on some integers
+import the module:
 >>> MyList = __import__('1-my_list').MyList
+
+create an instance:
 >>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(4)
->>> my_list.append(2)
->>> my_list.append(3)
->>> my_list.append(5)
->>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
+
+print the empty list:
 >>> print(my_list)
-[1, 4, 2, 3, 5]
-
-Test on negative number:
->>> new_list = MyList()
->>> new_list.append(-1)
->>> new_list.append(5)
->>> new_list.append(2)
->>> new_list.append(-4)
->>> new_list.append(0)
->>> new_list.print_sorted()
-[-4, -1, 0, 2, 5]
->>> print(new_list)
-[-1, 5, 2, -4, 0]
-
-Test on empty list:
->>> empty_list = MyList()
->>> empty_list.print_sorted()
 []
+>>> my_list.print_sorted()
+[]
+
+append positive numbers:
+>>> my_list.append(4)
+
+>>> my_list.append(1)
+
+>>> my_list.append(2)
+
+>>> my_list.append(3)
+
+print the list:
+>>> print(my_list)
+[4, 1, 2, 3]
+>>> my_list.print_sorted()
+[1, 2, 3, 4]
+
+append negative numbers:
+>>> my_list.append(-4)
+
+>>> my_list.append(-1)
+
+>>> my_list.append(-2)
+
+>>> my_list.append(-3)
+
+print the list with negative:
+>>> print(my_list)
+[4, 1, 2, 3, -4, -1, -2, -3]
+>>> my_list.print_sorted()
+[-4, -3, -2, -1, 1, 2, 3, 4]
