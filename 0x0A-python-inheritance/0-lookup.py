@@ -2,6 +2,8 @@
 """
 Lookup module
 """
+
+
 def lookup(obj):
     """
     returns dict
