@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""inherits_from."""
+"""
+Module for checking inheretence
+"""
 
 
 def inherits_from(obj, a_class):
-    """inherits_from.
-
-    :param obj:
-    :param a_class:
     """
-    if type(obj) is not a_class:
-        return issubclass(type(obj), a_class)
-    else:
+    return true if it inherits
+    returns false otherwise
+    """
+    if type(obj) is a_class:
         return False
+    elif issubclass(type(obj), a_class):
+        return True
+    else:
+        False
