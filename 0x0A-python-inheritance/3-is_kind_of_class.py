@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-Module
+Module of is class func
 """
 
 
 def is_kind_of_class(obj, a_class):
     """
-    function of module
+    is kind of class func
     """
-    if isinstance(obj, a_class) or isinstance(type(obj), a_class):
+    if isinstance(obj, a_class):
         return True
     else:
         return False
