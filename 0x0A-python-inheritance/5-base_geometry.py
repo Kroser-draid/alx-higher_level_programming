@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-"""class"""
+"""
+Module of basegeo class
+"""
 
 
 class BaseGeometry:
-    """BaseGeometry."""
-
+    """
     pass
+    """
+    def __init__(self):
+        pass
