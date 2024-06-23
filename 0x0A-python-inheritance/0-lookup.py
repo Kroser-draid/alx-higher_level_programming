@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 """
-Lookup module
+Module for lookup function
 """
 
 
 def lookup(obj):
-    """
-    returns dict
-    """
-    return (dir(obj))
+    return list(dir(obj))
