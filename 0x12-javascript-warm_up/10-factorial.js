@@ -1,16 +1,15 @@
 #!/usr/bin/node
-let num = Number(process.argv[2]);
+const num = Number(process.argv[2]);
 let result = 1;
 if (isNaN(num)) {
   console.log(result);
 } else {
   function factorial (numb) {
-    if (num <= 1) {
+    if (numb <= 1) {
       return result;
     } else {
-      result *= num;
-      num = numb - 1;
-      return factorial(num);
+      result *= numb;
+      return factorial(numb - 1);
     }
   }
   console.log(factorial(num));
