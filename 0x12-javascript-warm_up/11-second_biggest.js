@@ -7,6 +7,6 @@ if (process.argv.length <= 3) {
   for (let i = 2; i < length; i++) {
     number.push(Number(process.argv[i]));
   }
-  number.sort();
+  number.sort((a, b) => a - b);
   console.log(number[number.length - 2]);
 }
