@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-class Rectangle {
+module.exports = class Rectangle {
   constructor (w, h) {
     if (h > 0 && !Number.isNaN(h) && w > 0 && !Number.isNaN(w)) {
       this.height = h;
@@ -17,5 +17,4 @@ class Rectangle {
       console.log(message);
     }
   }
-}
-module.exports = Rectangle;
+};
