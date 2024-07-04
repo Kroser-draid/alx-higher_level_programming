@@ -13,7 +13,7 @@ class Rectangle {
     for (let j = 0; j < (this.width - 1); j++) {
       message += 'x';
     }
-    for (let i = 0; i < (this.height - 1); i++) {
+    for (let i = 0; i < (this.height); i++) {
       console.log(message);
     }
   }
