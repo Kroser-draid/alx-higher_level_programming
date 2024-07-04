@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-module.exports = class Rectangle {
+class Rectangle {
   constructor (w, h) {
     if (w > 0 && !Number.isNaN(w) && h > 0 && !Number.isNaN(h)) {
       this.width = w;
@@ -10,11 +10,13 @@ module.exports = class Rectangle {
 
   print () {
     for (let i = 0; i < this.height; i++) {
-      let result = '';
+      let message = '';
       for (let j = 0; j < this.width; j++) {
-        result += 'X';
+        message += 'X';
       }
-      console.log(result);
+      console.log(message);
     }
   }
-};
+}
+
+module.exports = Rectangle;
