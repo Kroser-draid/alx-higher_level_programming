@@ -1,3 +1,3 @@
 #!/bin/bash
-#bash script that show the header
-curl -sH "X-School-User-Id: 98" "$1" 
+#a Bash script that takes in a URL as an argument,
+curl -s -H "X-School-User-Id: 98" "$1"
