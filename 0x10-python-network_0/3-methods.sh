@@ -1,3 +1,3 @@
 #!/bin/bash
 #script that shows body of response
-curl -s -X OPTIONS -i "$1" | awk -F': ' '/^Allow/{print $2}'
+curl -sX OPTIONS -i "$1" | grep "Allow" | awk -F ': ' '{print $2}'
