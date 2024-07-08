@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-class Square
+Module of a square
 """
 
 
 class Square:
     """
-    class square
+    class of square
     """
     def __init__(self):
         pass
