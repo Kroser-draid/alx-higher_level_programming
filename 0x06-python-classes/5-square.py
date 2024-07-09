@@ -1,25 +1,22 @@
 #!/usr/bin/python3
 """
-class Square
+Module of a square
 """
 
 
 class Square:
     """
-    class square
+    class of square
     """
     def __init__(self, size=0):
         if not isinstance(size, int):
-            raise TypeError("size must be an integer")
+            raise TypeError('size must be an integer')
         elif size < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError('size must be >= 0')
         else:
             self.__size = size
 
     def area(self):
-        """
-        area function
-        """
         return self.__size ** 2
 
     @property
@@ -29,18 +26,17 @@ class Square:
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+            raise TypeError('size must be an integer')
         elif value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError('size must be >= 0')
         else:
             self.__size = value
 
     def my_print(self):
-        size = self.__size
-        if size == 0:
+        if self.__size == 0:
             print("")
         else:
-            for i in range(size):
-                for j in range(size):
+            for i in range(self.__size):
+                for j in range(self.__size):
                     print("#", end='')
-                print("")
+                print('')
