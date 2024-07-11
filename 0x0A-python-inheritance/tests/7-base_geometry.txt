@@ -28,3 +28,9 @@ Try with less than zero:
 Traceback (most recent call last):
 ...
 ValueError: distance must be greater than 0
+
+Try empty:
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
