@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-"""function"""
+"""
+Module for a function that write in a file in utf-8 encoding
+"""
 
 
 def write_file(filename="", text=""):
-    """write_file.
-
-    :param filename:
-    :param text:
-    """
-    with open(filename, 'w', encoding="utf-8") as f:
-        return f.write(text)
+    with open(filename, "w", encoding='UTF-8') as file:
+        chars = file.write(text)
+    return chars
