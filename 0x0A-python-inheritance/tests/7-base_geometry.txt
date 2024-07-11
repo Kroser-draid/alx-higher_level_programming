@@ -11,6 +11,36 @@ try with integer:
 
 >>> bg.integer_validator("width", 89)
 
+Checking for area failure:
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+Checking too many arguments for area:
+>>> bg.area(1)
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+
+Try empty:
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Checking for only 1 argument to integer_validator:
+>>> bg.integer_validator("integer")
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+Checking for too many arguments:
+>>> bg.integer_validator("integer", 1, 2)
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+
 Try with string instead:
 >>> bg.integer_validator("name", "jhon")
 Traceback (most recent call last):
@@ -29,8 +59,48 @@ Traceback (most recent call last):
 ...
 ValueError: distance must be greater than 0
 
-Try empty:
->>> bg.integer_validator()
+Checking for non-integer types:
+>>> bg.integer_validator("bool", True)
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: bool must be an integer
+>>> bg.integer_validator("float", 1.5)
+Traceback (most recent call last):
+...
+TypeError: float must be an integer
+>>> bg.integer_validator("complex", complex(1, 1))
+Traceback (most recent call last):
+...
+TypeError: complex must be an integer
+>>> bg.integer_validator("string", "hello")
+Traceback (most recent call last):
+...
+TypeError: string must be an integer
+>>> bg.integer_validator("tuple", (1, 2))
+Traceback (most recent call last):
+...
+TypeError: tuple must be an integer
+>>> bg.integer_validator("list", [1, 2, 3])
+Traceback (most recent call last):
+...
+TypeError: list must be an integer
+>>> bg.integer_validator("dict", {"key": "value"})
+Traceback (most recent call last):
+...
+TypeError: dict must be an integer
+>>> bg.integer_validator("set", {"hello", "world"})
+Traceback (most recent call last):
+...
+TypeError: set must be an integer
+>>> bg.integer_validator("frozenset", frozenset(["hello", "world"]))
+Traceback (most recent call last):
+...
+TypeError: frozenset must be an integer
+>>> bg.integer_validator("bytes", b"bytes")
+Traceback (most recent call last):
+...
+TypeError: bytes must be an integer
+>>> bg.integer_validator("bytearrays", bytearray(b"bytes"))
+Traceback (most recent call last):
+...
+TypeError: bytearrays must be an integer
