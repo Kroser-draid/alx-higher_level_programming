@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-"""function"""
+"""
+Module of a function that decode a document to string
+"""
 import json
 
 
 def from_json_string(my_str):
-    """from_json_string.
-
-    :param my_str:
-    """
+    """ function that decode a document to string """
     return json.loads(my_str)
