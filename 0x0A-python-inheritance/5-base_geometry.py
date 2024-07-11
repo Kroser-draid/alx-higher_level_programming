@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Module of basegeo class
+module for class BaseGeometry
 """
 
 
 class BaseGeometry:
     """
-    pass
+    basegeometry class
     """
     def __init__(self):
         pass
