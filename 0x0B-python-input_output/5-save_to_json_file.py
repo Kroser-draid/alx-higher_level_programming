@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-"""function"""
+"""
+Module for a function that save to a json file
+"""
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """save_to_json_file.
-
-    :param my_obj:
-    :param filename:
-    """
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(my_obj, f)
+    """ function that save to a json file """
+    with open(filename, "w", encoding='UTF-8') as file:
+        data = json.dumps(my_obj)
+        file.write(data)
