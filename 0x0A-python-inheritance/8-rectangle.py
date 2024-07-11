@@ -13,6 +13,7 @@ class Rectangle(bg):
             super().integer_validator("height", height)
         except Exception as e:
             print("[{}] {}".format(e.__class__.__name__, e))
+            exit()
         else:
             self.__width = width
             self.__height = height
