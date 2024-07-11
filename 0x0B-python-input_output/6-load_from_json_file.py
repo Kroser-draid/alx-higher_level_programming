@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""function"""
+"""
+Module for a function that load from a json file
+"""
 import json
 
 
 def load_from_json_file(filename):
-    """load_from_json_file.
-
-    :param filename:
-    """
-    with open(filename, 'r', encoding="utf-8") as f:
-        return json.load(f)
+    """ function that load from a json file """
+    with open(filename, "r", encoding='UTF-8') as file:
+        data = file.read()
+        returned_data = json.loads(data)
+    return returned_data
