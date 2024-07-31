@@ -12,5 +12,5 @@ request(process.argv[2], function (error, response, body) {
     return;
   }
 
-  console.log('code: ', response.statusCode);
+  console.log('code:', response.statusCode);
 });
