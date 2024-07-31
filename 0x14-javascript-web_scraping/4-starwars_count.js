@@ -1,27 +1,24 @@
 #!/usr/bin/node
-const api = process.argv[2];
+
 const request = require('request');
-const util = require('util');
+const path = process.argv[2];
 
-const requestPromise = util.promisify(request);
-
-async function calcoccurences () {
-  let occurences = 0;
-  const character = 'https://swapi-api.alx-tools.com/api/people/18/';
-  for (let i = 1; i < 8; i++) {
-    const NewApi = api + '/' + i + '/';
-    try {
-      const response = await requestPromise(NewApi);
-      if (response.statusCode !== 200) {
-        console.log('Status Code:', response.statusCode);
-        continue;
+request(path, function (err, response, body) {
+  if (err) {
+    console.error(err);
+  } else if (response.statusCode === 200) {
+    const films = JSON.parse(body).results;
+    let occurences = 0;
+    for (const filmIndex in films) {
+      const filmchars = films[filmIndex].characters;
+      for (const charIndex in filmchars) {
+        if (filmchars[charIndex].includes('18')) {
+          occurences++;
+        }
       }
-      const data = JSON.parse(response.body);
-      occurences += data.characters.filter(value => value === character).length;
-    } catch (error) {
-      console.error('Error:', error);
     }
+    console.log(occurences);
+  } else {
+    console.log('Unexpected Status Code:', response.statusCode);
   }
-  console.log(occurences);
-}
-calcoccurences();
+});
