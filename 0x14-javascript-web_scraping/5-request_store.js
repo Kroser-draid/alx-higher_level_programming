@@ -8,7 +8,7 @@ request(url, (err, response, body) => {
   if (err) {
     console.error(err);
     return;
-  } else if (response.statusCode ==! 200) {
+  } else if (response.statusCode !== 200) {
     console.log('Unexpected status code:', response.statusCode);
     return;
   }
