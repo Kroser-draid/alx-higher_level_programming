@@ -3,7 +3,7 @@
 const request = require('request');
 const movie = 'https://swapi-api.alx-tools.com/api/films/' + process.argv[2] + '/';
 
-function PrintChar (path) {
+async function PrintChar (path) {
   request(path, (err, response, body) => {
     if (err) {
       console.error(err);
