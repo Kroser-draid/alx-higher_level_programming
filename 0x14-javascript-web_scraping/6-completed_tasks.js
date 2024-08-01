@@ -9,17 +9,19 @@ request(url, (err, response, body) => {
   } else if (response.statusCode !== 200) {
     console.log('Unexpected status code:', response.statusCode);
   }
-  const data = JSON.parse(body);
-  const dict = {};
-  for (const i in data) {
-    const item = data[i].userId;
-    if (dict[item] === undefined && data[i].completed === true) {
-      dict[item] = 1;
-    } else if (dict[item] !== undefined && data[i].completed === true) {
-      dict[item]++;
-    } else if (dict[item] === undefined && data[i].completed === false) {
-      dict[item] = 0;
+  try {
+    const data = JSON.parse(body);
+    const dict = {};
+    for (const item of data) {
+      if (!(item.userId in dict)) {
+        dict[item.userId] = 0;
+      }
+      if (item.completed) {
+        dict[item.userId]++;
+      }
     }
+    console.log(dict);
+  } catch (parseError) {
+    console.log(parseError);
   }
-  console.log(dict);
 });
