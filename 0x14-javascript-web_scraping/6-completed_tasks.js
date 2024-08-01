@@ -13,7 +13,7 @@ request(url, (err, response, body) => {
     const data = JSON.parse(body);
     const dict = {};
     for (const item of data) {
-      if (!(item.userId in dict)) {
+      if (!(item.userId in dict) && item.completed) {
         dict[item.userId] = 0;
       }
       if (item.completed) {
