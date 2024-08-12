@@ -1,16 +1,20 @@
 #!/usr/bin/python3
-"""file"""
+""" module for a function """
 
 
 def class_to_json(obj):
-    """class_to_json.
-
-    :param obj:
-    """
-    serial_obj = {}
-
-    for key, value in obj.__dict__.items():
-        if isinstance(value, (list, dict, str, int, bool)):
-            serial_obj[key] = value
-
-    return serial_obj
+    """ function that returns json serialazition of an obj """
+    if isinstance(obj, dict):
+        return "{" + ", ".join(f'"{k}": {class_to_json(v)}'
+                               for k, v in obj.items()) + "}"
+    elif isinstance(obj, list):
+        return "[" + ", ".join(class_to_json(item)
+                               for item in obj.items()) + "]"
+    elif isinstance(obj, str):
+        return '"{obj}"'
+    elif isinstance(obj, (int, float)):
+        return str(obj)
+    elif isinstance(obj, bool):
+        return str(obj).lower()
+    elif obj is None:
+        return "null"
