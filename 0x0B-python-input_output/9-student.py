@@ -1,21 +1,21 @@
 #!/usr/bin/python3
-"""file"""
+""" module of a student clss """
 
 
 class Student:
-    """Student."""
-
+    """ student class """
     def __init__(self, first_name, last_name, age):
-        """__init__.
-
-        :param first_name:
-        :param last_name:
-        :param age:
-        """
+        """ init """
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self):
-        """to_json."""
-        return self.__dict__.copy()
+        """ return rep """
+        ser_obj = {}
+
+        for k, v in self.__dict__.items():
+            if isinstance(v, (dict, list, str, int, bool)):
+                ser_obj[k] = v
+
+        return ser_obj
