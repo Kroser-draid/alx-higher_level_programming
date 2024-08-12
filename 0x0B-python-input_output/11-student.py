@@ -31,4 +31,4 @@ class Student:
         """ method that replaces the attrs """
 
         for k, v in json.items():
-            self.k = v
+            setattr(self, k, v)
