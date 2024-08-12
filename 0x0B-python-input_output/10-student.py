@@ -21,7 +21,7 @@ class Student:
         else:
             for k, v in self.__dict__.items():
                 if (isinstance(v, (dict, list, str, int, bool))
-                and k in attrs):
+                        and k in attrs):
                     ser_obj[k] = v
 
         return ser_obj
