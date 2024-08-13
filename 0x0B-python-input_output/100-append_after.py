@@ -1,19 +1,15 @@
 #!/usr/bin/python3
-"""file"""
+""" module for a function append after """
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """append_after.
+    """ function """
+    new_reel = []
+    with open(filename, "r") as file:
+        lines = file.readlines()
 
-    :param filename:
-    :param search_string:
-    :param new_string:
-    """
-    with open(filename, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-
-    with open(filename, "w", encoding="utf-8") as f:
+    with open(filename, "w") as file:
         for line in lines:
-            f.write(line)
+            file.write(line)
             if search_string in line:
-                f.write(new_string)
+                file.write(new_string)
