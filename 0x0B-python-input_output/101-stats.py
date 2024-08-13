@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" Module for function  """
 import sys
+""" Module for function  """
+
 
 while True:
     ok = 0
