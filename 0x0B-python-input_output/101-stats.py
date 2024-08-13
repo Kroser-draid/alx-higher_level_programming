@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import sys
-""" Module for function  """
+""" Module for function """
 
 
 while True:
@@ -15,7 +15,6 @@ while True:
     size = 0
 
     for i in range(10):
-
 
         line = sys.stdin.readline()
         parts = line.strip().split(' ')
