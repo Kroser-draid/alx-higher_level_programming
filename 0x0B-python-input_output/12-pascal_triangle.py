@@ -5,7 +5,7 @@
 def pascal_triangle(n):
     """ pascal triangle function returns a list of list """
     if (n <= 0):
-        return [[]]
+        return []
     result = [[1]]
 
     for i in range(n):
