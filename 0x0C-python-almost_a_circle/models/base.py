@@ -1,11 +1,21 @@
 #!/usr/bin/python3
-""" Module for base Class """
+"""Defines a base model class."""
 
 
 class Base:
-    """ Base class """
+    """Represent the base model.
+
+    Represents the "base" for all other classes in project 0x0C*.
+
+    Attributes:
+        __nb_objects (int): The number of instantiated Bases.
+    """
     def __init__(self, id=None):
-        """ init for base class """
+        """Initialize a new Base.
+
+        Args:
+            id (int): The identity of the new Base.
+        """
         self.__nb_objects = 0
         if id is not None:
             self.id = id
