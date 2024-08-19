@@ -5,6 +5,7 @@
 class Base:
     """ Base class """
     def __init__(self, id=None):
+        """ init for base class """
         self.__nb_objects = 0
         if id is not None:
             self.id = id
